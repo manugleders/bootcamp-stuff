@@ -1,0 +1,32 @@
+import random
+
+# we need to ask the user to choose rock paper scissors
+userChoice = input("do you want to choose rock, paper, scissors? ")
+
+print(" You chose " +userChoice)
+# we need computer to choose rock paper scissors
+computerOptions = ["rock","paper","scissors"]
+computerChoice = random.choice(computerOptions)
+print(" I chose " +computerChoice)
+
+# compare the choices to see who wins
+if userChoice == "rock" and computerChoice == "scissors":
+  print("You win")
+if userChoice == "rock" and computerChoice == "rock":
+     print("It's a Draw")
+if userChoice == "rock" and computerChoice == "paper":       
+  print("I win")
+if userChoice == "scissors" and computerChoice == "rock":
+  print("I Win")
+if userChoice == "paper" and computerChoice == "scissors":
+  print("I win")
+if userChoice == "paper" and computerChoice == "rock":
+  print("You win")
+if userChoice == "paper" and computerChoice == "paper":
+  print("It's a Draw")
+if userChoice == "scissors" and computerChoice == "scissors":
+  print("It's a Draw")
+if userChoice == "scissors" and computerChoice == "paper":
+  print("You win")
+
+# tell user if they won or not

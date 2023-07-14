@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" id="display" value="0">
+        <input type="button" value="AC" onclick="clearDisplay()">
+        <input type="button" value="+" onclick="addNumber('+')">
+        <input type="button" value="-" onclick="addNumber('-')">
+        <input type="button" value="*" onclick="addNumber('*')">
+        <input type="button" value="/" onclick="addNumber('/')">
+        <input type="button" value="." onclick="addNumber('.')">
+    </div>
+    <script>
+        function clearDisplay() {
+            document.getElementById("display").value = "0";
+        }
+        function addNumber(operator) {
+            var number = document.getElementById("display").value;
+            var result = 0;
+            if (number != "0") {
+                result = parseFloat(number);
+            }
+            switch (operator) {
+                case "+":
+                    result += parseFloat(prompt("Enter the next number: "));
+                    break;
+                case "-":
+                    result -= parseFloat(prompt("Enter the next number: "));
+                    break;
+                case "*":
+                    result *= parseFloat(prompt("Enter the next number: "));
+                    break;
+                case "/":
+                    result /= parseFloat(prompt("Enter the next number: "));
+                    break;
+            }
+            document.getElementById("display").value = result;
+        }
+    </script>
+</body>
+
+</html>
